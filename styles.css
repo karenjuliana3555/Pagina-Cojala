@@ -24,6 +24,8 @@
     background-color: #000;
     color: #fff;
     padding: 0;
+    padding-top: 120px;
+    height: auto;
   }
 
   header {
@@ -45,13 +47,22 @@
 
   nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     list-style: none;
     justify-content: center;
     gap: 15px;
     margin: 0;
     padding: 0;
   }
+
+  /* NAV en pantallas pequeñas (vertical) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
 
   nav a {
     color: #fff;
@@ -139,7 +150,7 @@
 
   .gif-section {
       text-align: center;
-      padding: 130px;
+      padding: 140px;
       background-color: #000000;
   }
 
@@ -241,7 +252,6 @@
     margin: 20px auto 100px;
     font-family: Arial, sans-serif;
     color: black;
-    height: 100px;
   }
 
   h1{
@@ -523,6 +533,20 @@ html { scroll-behavior: smooth; }
   gap: 20px;
 }
 
+/* En celular las tarjetas ocupan todo el ancho */
+@media (max-width: 768px) {
+  .card-carousel {
+    flex-direction: row;   /* sigue en fila, no columna */
+    overflow-x: scroll;    /* 👈 permite deslizar con el dedo */
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;        /* 👈 ocupa todo el ancho */
+    scroll-snap-align: center;
+  }
+}
+
 /* Tarjetas */
 .carousel-item {
   flex: 0 0 calc(33.33% - 20px);
@@ -710,4 +734,16 @@ img {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal y franjas */
+}
+
+footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
