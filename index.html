@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cójala Suave</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+<div class="logo">
+  <a href="#logo-animado">
+    <img src="Imagenes/logo.png" alt="Logo">
+  </a>
+</div>
+    <nav>
+      <ul>      
+        <li><a href="#que-es">¿Qué es Cójala Suave?</a></li>
+        <li><a href="#problematica">Problemática</a></li>
+        <li><a href="#produccion">Producción</a></li>
+        <li><a href="#capitulos">Capítulos</a></li>
+        <li><a href="#libro-ilustracion">Libro</a></li>
+        <li><a href="#hablemos">Hablemos</a></li>
+        <li><a href="Postart.com" target="_blank" class="btn-postart">Post Art</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gif-section" id="logo-animado">
+        <img src="Imagenes/gif cojala redimensionado.gif" alt="Animacion divertida" width="1000">
+        <!-- Flecha que activa las tarjetas -->
+  <div class="arrow" onclick="mostrarTarjetas()">⌄</div>
+    </section>
+
+    <section class="personajes">
+  <!-- Tarjetas ocultas -->
+  <div class="cards-container" id="tarjetas">
+    <!-- Tarjeta 1 -->
+    <div class="card card-red">
+      <img src="ficha-roja.png" alt="Ficha roja">
+      <div class="card-content">
+        <h3>ROSA</h3>
+        <p><b>"La que dispara frases antes de pensar"</b></p>
+          <p>Cree que la política es un juego de ladrones y que no vale la pena meterse. Se informa con memes y chismes de barrio, pero su voz siempre se hace escuchar. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card card-yellow">
+      <img src="ficha-amarilla.png" alt="Ficha amarilla">
+      <div class="card-content">
+        <h3>DEAVID</h3>
+        <p><b>"El que convierte chismes en datos"</b></p>
+          <p>Analiza cada titular, discurso y promesa como si fuera un caso de detectives. Le gusta entender cómo funciona el poder. A veces serio, a veces irónico.  
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarTarjetas() {
+      document.getElementById("tarjetas").style.display = "flex";
+    }
+  </script>
+  </section>
+  </main>
+
+<!-- Título amarillo -->
+    <section class="section-yellow-title">
+        <p id="que-es">¿QUÉ ES CÓJALA SUAVE?</p>
+    </section>
+
+ <!-- Cuadro blanco debajo -->
+    <div class="white-box">
+        <div class="text">
+            <p>Cójala Suave es un proyecto audiovisual que reconecta a los jóvenes con la política de manera cercana, crítica y honesta. Hablamos de lo político sin solemnidad ni tecnicismos, usando humor, sátira, memes e ilustración para mostrar que la política también está en lo cotidiano: la calle, la casa y las redes. Nuestro propósito es despertar el interés y la participación de una generación que siente que este tema no le pertenece, invitando a reflexionar, reír y cuestionar. Creemos que el verdadero cambio surge desde la empatía, el arte y la risa, por eso lo desarrollamos en miniseries, libros ilustrados y contenido digital para redes.
+            </p>
+        </div>
+        <div class="image">
+            <img src="Imagenes/Fichas abrazadas.png" alt="Fichas abrazadas">
+        </div>
+    </div>
+
+    <!-- Sección negra -->
+    <section class="fondo">
+        <h2 id="problematica">¿PODEMOS MOVER LAS FICHAS QUE CAMBIAN NUESTRO FUTURO?</h2>
+        <p>En Bogotá, gran parte de los jóvenes se mantiene alejada de la política por desconfianza hacia las instituciones, falta de educación cívica y la percepción de que sus opiniones no son tomadas en cuenta. Esta apatía se ve reforzada por la desinformación y los discursos extremos que circulan en redes sociales, así como por las preocupaciones económicas y la falta de oportunidades laborales. El resultado es una generación digitalmente conectada, pero desconectada de los procesos democráticos y de la toma de decisiones que afectan su vida diaria.
+          Cójala Suave nace para enfrentar esta realidad, acercando lo político a lo cotidiano a través del humor, la sátira y un lenguaje fresco y visual. Nuestro objetivo es que los jóvenes recuperen la confianza, se informen y participen de manera consciente, entendiendo que su voz es clave para transformar la ciudad y el país.
+        </p>
+    </section>
+
+    <!-- Encabezado amarillo -->
+    <div class="header">
+        <p id="produccion">PRODUCCIÓN</p>
+    </div>
+
+    <!-- Video teaser -->
+    <video class="teaser-video" autoplay muted loop>
+        <source src="Imagenes/teaser.mp4.mp4" type="video/mp4">
+    </video>
+
+    <!-- Texto debajo del video -->
+    <div class="teaser-title">TEASER</div>
+    <div class="teaser-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+
+    <!-- Sección negra -->
+    <div class="seccion-negra" id="capitulos">
+        <p class="titulo">TITULO (MINI SERIE)</p>
+        <p class="subtitulo">CAPITULOS</p>
+
+  <div class="grid">
+    <!-- Primer cuadro con video -->
+      <div>
+        <div class="card1">
+          <video autoplay muted loop>
+            <source src="video1.mp4" type="video/mp4">
+          </video>
+            <div class="badge ver">VER</div>
+        </div>
+        <script>
+  function expandirVideo(video) {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // IE/Edge
+      video.msRequestFullscreen();
+    }
+    video.play(); // Asegura que siga reproduciendo
+  }
+</script>
+          <div class="card-title">CAPITULO 1:<br> NOMBRE DEL CAPITULO</div>
+      </div>
+
+    <!-- Segundo cuadro con imagen -->
+      <div>
+        <div class="card1">
+          <img src="img2.jpg" alt="Capítulo 2">
+            <div class="badge proximamente">PROXIMAMENTE</div>
+        </div>
+          <div class="card-title">CAPITULO 2:<br> NOMBRE DEL CAPITULO</div>
+      </div>
+
+    <!-- Tercer cuadro con imagen -->
+      <div>
+        <div class="card1">
+          <img src="img3.jpg" alt="Capítulo 3">
+            <div class="badge proximamente">PROXIMAMENTE</div>
+        </div>
+          <div class="card-title">CAPITULO 3:<br> NOMBRE DEL CAPITULO</div>
+      </div>
+
+    <!-- Cuarto cuadro con imagen -->
+      <div>
+        <div class="card1">
+          <img src="img4.jpg" alt="Capítulo 4">
+            <div class="badge proximamente">PROXIMAMENTE</div>
+        </div>
+          <div class="card-title">CAPITULO 4:<br> NOMBRE DEL CAPITULO</div>
+      </div>
+  </div>
+    </div>
+
+     <!-- Otras secciones de tu sitio arriba/abajo... -->
+
+  <section id="libro-ilustracion" class="feature-section">
+    <div class="feature-wrap">
+       <figure class="img-frame">
+  <a href="ruta/del-libro.pdf" target="_blank">
+    <img src="Imagenes/Libro.png" alt="Tarjetas con ilustraciones de peones" />
+  </a>
+</figure>
+
+      <div class="feature-text">
+        <h2>
+          LIBRO DE<br />
+          ILUSTRACIÓN
+        </h2>
+        <p>
+          Presenta un cómic original que retrata una Bogotá real y cotidiana, sin idealizar ni exagerar. A través de personajes propios, muestra escenas y diálogos comunes que revelan cómo la política también está en la calle, en un trancón o en conversaciones diarias.
+          Incluye ilustraciones finales, bocetos y el proceso creativo, reflejando decisiones de diseño y evolución gráfica. Más que un cómic, es una declaración visual que demuestra que la política también se dibuja, se siente y se vive desde lo gráfico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section class="carousel-section" id="hablemos">
+  <h2 class="carousel-title">HABLEMOS</h2>
+
+<div class="carousel-wrapper">
+  <div class="card-carousel" id="carousel">
+
+    <div class="carousel-item red">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi inventore optio dolore accusantium esse possimus natus eveniet ullam quidem, eius perferendis quos sed tenetur nesciunt cum architecto nobis. Iusto, quam?</p>
+    </div>
+
+    <div class="carousel-item white">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates, minus nihil dolores a voluptas quidem! Culpa vitae laudantium in at beatae dignissimos animi nam provident, modi natus nisi doloribus.</p>
+    </div>
+
+    <div class="carousel-item yellow">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, voluptatem? Vitae magnam impedit totam, blanditiis asperiores consequuntur, natus qui delectus adipisci a commodi facilis fuga incidunt repellendus veniam eligendi rem.</p>
+    </div>
+
+    <div class="carousel-item red">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quae mollitia nihil fugit odio hic. Cum tenetur vel perspiciatis corrupti, at quisquam, et tempore officia iste, sed laboriosam reprehenderit deserunt?</p>
+    </div>
+
+    <div class="carousel-item white">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique asperiores sequi aspernatur officiis aliquam. Laudantium pariatur architecto magnam? Illum necessitatibus iusto quia architecto libero dolorem cupiditate unde nobis, itaque modi?</p>
+    </div>
+
+    <div class="carousel-item yellow">
+      <div class="card-header">Lore</div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis est, at velit veniam dolorem molestias corrupti! Quaerat totam quibusdam cum eligendi, in iusto sapiente incidunt consequatur enim, impedit veritatis! Consectetur.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 Botones abajo a la derecha -->
+<div class="carousel-navigation">
+  <button class="carousel-arrow prev" id="prevBtn">&#10094;</button>
+  <button class="carousel-arrow next" id="nextBtn">&#10095;</button>
+</div>
+</section>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const items = document.querySelectorAll(".carousel-item");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let index = 0;
+  const totalItems = items.length;
+  const visibleItems = 3;
+
+  function showSlide() {
+    const slideWidth = 100 / visibleItems;
+    carousel.style.transform = `translateX(${-index * slideWidth}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index++;
+    if (index > totalItems - visibleItems) {
+      index = 0; // vuelve al inicio
+    }
+    showSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index--;
+    if (index < 0) {
+      index = totalItems - visibleItems; // vuelve al final
+    }
+    showSlide();
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="Imagenes/logo 2.png" alt="Logo Cojala Suave" />
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-socials">
+      <p>
+        <a href="https://www.tiktok.com/@somoscojalasuave" target="_blank" class="social-link">
+          <img src="Imagenes/Logo tik tok.png" alt="TikTok" />
+          @somoscojalasuave
+        </a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/cojalasuave_" target="_blank" class="social-link">
+          <img src="Imagenes/Logo instagram.png" alt="Instagram" />
+          @cojalasuave_
+        </a>
+      </p>
+      <p>
+        <a href="https://x.com/cojalasuaveoff" target="_blank" class="social-link">
+          <img src="Imagenes/Logo x.png" alt="Twitter" />
+          @cojalasuaveoff
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Derechos reservados -->
+  <div class="footer-rights">
+    <p>Copyright © CÓJALA SUAVE S.A.S. 2025. Todos los derechos reservados - Powered by PostArt</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
