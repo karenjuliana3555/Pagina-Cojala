@@ -44,10 +44,15 @@
 
   nav ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    justify-content: center;
     gap: 15px;
     margin: 0;
     padding: 0;
+  }
+  nav u li {
+    margin: 5px 10px;
   }
 
   nav a {
@@ -209,6 +214,9 @@
       padding: 40px 20px;
       color: white;
       text-align: center;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
   }
 
   .fondo h2 {
@@ -486,6 +494,8 @@ html { scroll-behavior: smooth; }
   background-size: cover;
   background-position: center;
   padding: 60px 20px;   /* margen interno normal */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-title {
@@ -614,6 +624,20 @@ html { scroll-behavior: smooth; }
   color: #aaa;
 }
 
+/* --- Media queries para celular --- */
+@media (max-width: 768px) {
+  h1, h2, h3, p {
+    text-align: center; /* centra texto en móvil */
+  }
 
+  nav ul {
+    flex-direction: column; /* menú en columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  .section {
+    padding: 15px;
+  }
+}
 
 
