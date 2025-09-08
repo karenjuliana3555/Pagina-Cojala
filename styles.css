@@ -521,7 +521,6 @@ html { scroll-behavior: smooth; }
 
 /* Contenedor que recorta lo que se sale */
 .carousel-wrapper {
-  position: relative;
   overflow: hidden;
   width: 100%;
 }
@@ -529,21 +528,19 @@ html { scroll-behavior: smooth; }
 /* Contenedor de tarjetas */
 .card-carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
   gap: 20px;
 }
 
 /* En celular las tarjetas ocupan todo el ancho */
 @media (max-width: 768px) {
   .card-carousel {
-    flex-direction: row;   /* sigue en fila, no columna */
-    overflow-x: scroll;    /* 👈 permite deslizar con el dedo */
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
-
   .carousel-item {
-    flex: 0 0 100%;        /* 👈 ocupa todo el ancho */
-    scroll-snap-align: center;
+    flex: 0 0 80%;
   }
 }
 
@@ -551,10 +548,9 @@ html { scroll-behavior: smooth; }
 .carousel-item {
   flex: 0 0 calc(33.33% - 20px);
   border-radius: 16px;
-  text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   box-sizing: border-box;
-  overflow: hidden;
+overflow: hidden;
   background: #fff;
 }
 
@@ -652,98 +648,80 @@ html { scroll-behavior: smooth; }
   color: #aaa;
 }
 
-  /* ====== Ajustes responsive ====== */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Pantallas pequeñas (celulares) */
+/* ============================= */
+/*        RESPONSIVE MOBILE      */
+/* ============================= */
 @media (max-width: 768px) {
-  /* === NAV === */
-  nav ul {
+  /* Header y menú */
+  header {
     flex-direction: column;
     align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
     gap: 10px;
+    padding: 0;
   }
 
-  nav ul li {
-    margin: 5px 0;
+  /* Gif centrado */
+  .gif-section img {
+    max-width: 90%;
+    height: auto;
   }
 
-  /* === WHITE-BOX === */
+  /* Tarjetas apiladas en lugar de lado a lado */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Sección "Quiénes somos" en columna */
   .white-box {
     flex-direction: column;
     text-align: center;
   }
 
-  .white-box .image{
-    flex: 0 0 180px;
-  }
-
-  .white-box .text{
-    flex: 1 1 60%;
-  }
-
   .white-box .image img {
-    width: 100% !important;
-    height: auto !important;
+    max-width: 90%;
   }
 
-  /* === GRID === */
-  .grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  .card1 {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* === FEATURE-WRAP === */
-  .feature-wrap {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-  }
-
-  /* === CAROUSEL === */
-  .card-carousel {
-    flex-direction: column;
-  }
-
-  .carousel{
-    max-width: 100%;
-    margin: 0 auto;
+  /* Carrusel ocupa ancho completo */
+  .carousel-wrapper {
     overflow: hidden;
   }
 
-  .crousel img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+  .card-carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
   }
 
   .carousel-item {
-    flex: 1 1 100% !important;
+    min-width: 80%;
+    margin: 0 auto;
   }
 
-  /* === FOOTER === */
+  /* Contacto en columna */
+  .feature-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-wrap img {
+    max-width: 90%;
+  }
+
+  /* Footer en columna */
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    text-align: center;
   }
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* evita scroll horizontal y franjas */
-}
-
-footer {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  overflow-x: hidden;
 }
